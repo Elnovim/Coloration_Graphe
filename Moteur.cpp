@@ -242,8 +242,6 @@ void Moteur::NoN()
     {
       s.clear();
       n = edges[i];
-      if (n->get_visit()==false)
-      {
 	s.push_back(n);
 	Graphe Gc(G);
 	np = n;
@@ -272,7 +270,6 @@ void Moteur::NoN()
 	  else
 	    cont = false;
 	}
-      }
       s_edges.push_back(s);
     }
     s = max_s(s_edges);

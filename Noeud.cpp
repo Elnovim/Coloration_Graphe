@@ -177,7 +177,7 @@ vector< Noeud* > Noeud::cross(Noeud* n)
   vector<Noeud*> result;
   for (unsigned int i=0; i<n_next.size(); ++i)
   {
-    if((find(next.begin(),next.end(),n_next[i]))!=next.end())
+    if((n_next[i]->get_visit() == false) && (find(next.begin(),next.end(),n_next[i]))!=next.end())
       result.push_back(n_next[i]);
   }
   return result;
