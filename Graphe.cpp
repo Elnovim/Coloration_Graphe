@@ -23,7 +23,6 @@ void Graphe::set_graphe(const string& _namefile)
 {
   int num1, num2;
   ifstream file (_namefile.c_str(), ios::in);
-  unsigned int i=0;
   if (file)
   {
     string line;
@@ -114,7 +113,7 @@ vector< Noeud* > Graphe::vois_2(Noeud* n)
   set<Noeud*>::iterator it;
   for (unsigned int i=0; i<vois.size(); ++i)
   {
-    if (vois[i] != nullptr)
+    if (vois[i]->get_visit() == false)
     {
       result = vois[i]->get_next();
       for (unsigned int j=0; j<result.size(); ++j)

@@ -122,7 +122,6 @@ void Noeud::init_g_f()
 
 int Noeud::find_color()
 {
-  int maxi;
   int color_test;
   vector<int> colors;
   bool already = true;
